@@ -19,9 +19,5 @@ function formatArrayStrings(strings, processedNumbers)
     }
   });
 }
+export {processArray, formatArrayStrings}
 
-const numbers = [1, 2, 3, 4, 5];
-const strings = ['hello', 'world', 'foo', 'bar', 'baz'];
-const processedNumbers = processArray(numbers);
-const formattedStrings = formatArrayStrings(strings, processedNumbers);
-console.log(formattedStrings);
