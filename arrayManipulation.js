@@ -8,6 +8,20 @@ function processArray(numbers) {
   })
 }
 
+function formatArrayStrings(strings, processedNumbers)
+{
+  return strings.map((string, i) => {
+    const number = processedNumbers[i];
+    if(number % 2 === 0) {
+      return string.toUpperCase();
+    } else {
+      return string.toLowerCase();
+    }
+  });
+}
+
 const numbers = [1, 2, 3, 4, 5];
+const strings = ['hello', 'world', 'foo', 'bar', 'baz'];
 const processedNumbers = processArray(numbers);
-console.log(processedNumbers)
+const formattedStrings = formatArrayStrings(strings, processedNumbers);
+console.log(formattedStrings);
